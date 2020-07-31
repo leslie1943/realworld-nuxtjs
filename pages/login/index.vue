@@ -56,7 +56,12 @@
 
 <script>
 import { login, register } from '@/api/user'
+// 仅在客户端加载 js-cookie 包
+const Cookie = process.client ? require('js-cookie') : undefined
+
 export default {
+  // 拦截处理
+  middleware: ['notAuthenticated'],
   name: 'LoginIndex',
   computed: {
     isLogin() {
@@ -80,7 +85,12 @@ export default {
         const { data } = this.isLogin ? await login({ user: this.user }) : await register({ user: this.user })
         console.info(data)
         // TODO: 处理用户的登录状态
+        this.$store.commit('setUser', data.user)
 
+        // 为了防止刷新,需要数据持久化
+        Cookie.set('user', data.user)
+
+        // 必须设置到Cookie中,使用localStorage只能被客户端访问到,不能被服务端访问
         // 跳转到首页
         this.$router.push('/')
       } catch (err) {
