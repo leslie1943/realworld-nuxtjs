@@ -83,8 +83,6 @@ export default {
       try {
         // 提交表单登录/注册
         const { data } = this.isLogin ? await login({ user: this.user }) : await register({ user: this.user })
-        console.info(data)
-        // TODO: 处理用户的登录状态
         this.$store.commit('setUser', data.user)
 
         // 为了防止刷新,需要数据持久化

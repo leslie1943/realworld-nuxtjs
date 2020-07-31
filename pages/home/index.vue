@@ -12,11 +12,51 @@
         <div class="col-md-9">
           <div class="feed-toggle">
             <ul class="nav nav-pills outline-active">
-              <li class="nav-item">
-                <a class="nav-link disabled" href>Your Feed</a>
+              <!-- 🚀 Your Feed -->
+              <li class="nav-item" v-if="user">
+                <!-- 🎃点击#tag 清空 tag / page 🎃-->
+                <nuxt-link
+                  exact
+                  class="nav-link"
+                  :class="{active: tab==='your_feed' }"
+                  :to="{
+                  name: 'home',
+                  query:{
+                    tab: 'your_feed'
+                  }
+                }"
+                >Your Feed</nuxt-link>
               </li>
+              <!-- 🚀 Global Feed -->
               <li class="nav-item">
-                <a class="nav-link active" href>Global Feed</a>
+                <!-- 🎃点击#tag 清空 tag / page 🎃-->
+                <nuxt-link
+                  exact
+                  class="nav-link"
+                  :class="{active: tab==='global_feed' }"
+                  :to="{
+                  name: 'home',
+                  query:{
+                    tab: 'global_feed'
+                  }
+                }"
+                >Global Feed</nuxt-link>
+              </li>
+              <!-- 🚀 Tag Special  -->
+              <!-- 🎃点击#tag 的时候, 只保持tag的路由query参数 🎃-->
+              <li v-if="tag" class="nav-item">
+                <nuxt-link
+                  exact
+                  class="nav-link"
+                  :class="{active: tab==='tag' }"
+                  :to="{
+                  name: 'home',
+                  query:{
+                    tab: 'tag',
+                    tag: tag
+                  }
+                }"
+                ># {{tag}}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -41,11 +81,6 @@
                 {{article.favoritesCount}}
               </button>
             </div>
-            <!-- <a href class="preview-link">
-              <h1>How to build webapps that scale</h1>
-              <p>This is the description for the post.</p>
-              <span>Read more...</span>
-            </a>-->
             <nuxt-link :to="{name: 'article', params:{slug: article.slug}}" class="preview-link">
               <h1>{{article.title}}</h1>
               <p>{{article.description}}</p>
@@ -59,37 +94,107 @@
             <p>Popular Tags</p>
 
             <div class="tag-list">
-              <a href class="tag-pill tag-default">programming</a>
-              <a href class="tag-pill tag-default">javascript</a>
-              <a href class="tag-pill tag-default">emberjs</a>
-              <a href class="tag-pill tag-default">angularjs</a>
-              <a href class="tag-pill tag-default">react</a>
-              <a href class="tag-pill tag-default">mean</a>
-              <a href class="tag-pill tag-default">node</a>
-              <a href class="tag-pill tag-default">rails</a>
+              <!-- 🎃点击tag 的时候,只设置tab=tag(标识为tag操作) #tag 出现 🎃-->
+              <nuxt-link
+                v-for="item in tags"
+                :key="item"
+                :to="{
+                  name:'home',
+                  query: {
+                      tab: 'tag', 
+                      tag: item
+                    }
+                  }"
+                class="tag-pill tag-default"
+              >{{item}}</nuxt-link>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- 分页列表 -->
+      <nav>
+        <ul class="pagination">
+          <li
+            v-for="item in totalPage"
+            :key="item"
+            class="page-item"
+            :class="{active: item===page}"
+          >
+            <!-- <a class="page-link" :href="'/?page='+item">{{item}}</a> -->
+            <!-- 🎃 phase-1: 点击分页 query参数只保留Tag 🎃 -->
+            <!-- 🎃 phase-2: 点击分页 保留tab,否则分页数据错误 🎃 -->
+            <nuxt-link
+              class="page-link"
+              :to="{
+              name: 'home',
+              query: {
+                  page : item,
+                  tag: $route.query.tag,
+                  tab: $route.query.tab
+                }
+              }"
+            >{{item}}</nuxt-link>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </template>
 
 <script>
-import { getArticles } from '@/api/article'
+import { getArticles, getYourFeedArticles } from '@/api/article'
+import { getTags } from '@/api/tag'
+import { mapState } from 'vuex'
+
 export default {
   name: 'HomeIndex',
+
+  // watchQuery属性: 监听参数字符串更改并在更改时执行组件方法(asyncData,fetch,validate,layout,...)
+  // watchQuery: true, // true, 所有参数属性
+  watchQuery: ['page', 'tag', 'tab'],
+
   // asyncData 有利于SEO
-  async asyncData() {
+  async asyncData({ query }) {
+    const page = Number.parseInt(query.page || 1) // 通过上下文 query 获取路由的page属性
+    const tag = query.tag || '' // 哪个标签被选中
+    const limit = 20
+    const tab = query.tab || 'global_feed' // tab页
     const params = {
-      limit: 2,
-      offset: 2
+      limit: limit,
+      offset: (page - 1) * limit,
+      tag
     }
-    const { data } = await getArticles(params)
+    // 根据tab决定调用哪个articles
+    const loadArticles = tab === 'global_feed' ? getArticles : getYourFeedArticles
+    // 并行执行接口调用
+    const [articleRes, tagRes] = await Promise.all([
+      loadArticles(params),
+      getTags()
+    ])
+    // 串行执行接口调用
+    // const { data } = await getArticles(params)
+    // const { data: tagData } = await getTags()
+
+    const { articles, articlesCount } = articleRes.data
+    const { tags } = tagRes.data
+
     return {
-      articles: data.articles,
-      articlesCount: data.articlesCount
+      articles, // 文章列表
+      articlesCount, // 文章数量
+      limit, // 单页个数
+      page, // 页码
+      tags, // 标签列表
+      tab, // 选项卡
+      tag // 数据标签名
     }
+  },
+  computed: {
+    // 总页码
+    totalPage() {
+      return Math.ceil(this.articlesCount / this.limit)
+    },
+    ...mapState(['user'])
   }
 }
 </script>
