@@ -53,5 +53,14 @@ module.exports = {
         },
       ])
     }
-  }
+  },
+
+  // 注册插件
+  plugins: [
+    // 波浪线出发,从根路径触发
+    '~/plugins/request.js',
+    '~/plugins/dayjs.js'
+    // { src: '~/plugins/request.js', ssr: true },
+    // { src: '~/plugins/dayjs.js', ssr: true },
+  ]
 }

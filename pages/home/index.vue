@@ -71,11 +71,13 @@
                   class="author"
                   :to="{name: 'profile',params:{username: article.author.username}}"
                 >{{article.author.username}}</nuxt-link>
-                <span class="date">{{article.createdAt}}</span>
+                <span class="date">{{article.createdAt | date('MMM DD YYYY')}}</span>
               </div>
               <button
                 class="btn btn-outline-primary btn-sm pull-xs-right"
                 :class="{active: article.favorited}"
+                @click="onFavorite(article)"
+                :disabled="article.favoriteDisable"
               >
                 <i class="ion-heart"></i>
                 {{article.favoritesCount}}
@@ -143,7 +145,7 @@
 </template>
 
 <script>
-import { getArticles, getYourFeedArticles } from '@/api/article'
+import { getArticles, getYourFeedArticles, addFavorite, deleteFavorite } from '@/api/article'
 import { getTags } from '@/api/tag'
 import { mapState } from 'vuex'
 
@@ -177,6 +179,10 @@ export default {
     // const { data: tagData } = await getTags()
 
     const { articles, articlesCount } = articleRes.data
+
+    // 添加自定义属性,防止一直点击
+    articles.forEach(article => article.favoriteDisable = false)
+
     const { tags } = tagRes.data
 
     return {
@@ -195,6 +201,23 @@ export default {
       return Math.ceil(this.articlesCount / this.limit)
     },
     ...mapState(['user'])
+  },
+  methods: {
+    async onFavorite(article) {
+      article.favoriteDisable = true
+      if (article.favorited) {
+        // 取消点赞
+        await deleteFavorite(article.slug)
+        article.favorited = false
+        article.favoritesCount += -1
+      } else {
+        // 添加点赞
+        await addFavorite(article.slug)
+        article.favorited = true
+        article.favoritesCount += 1
+      }
+      article.favoriteDisable = false
+    }
   }
 }
 </script>

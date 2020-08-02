@@ -22,7 +22,6 @@ export const actions = {
   // nuxtServerInit 这是个特殊的action  会在服务端渲染期间自动运行
   // 作用: 初始化容器数据, 传递数据给客户端使用
   nuxtServerInit({ commit }, { req }) {
-    // TODO:
     let user = null
     // 如果请求头中有 Cookie
     if (req.headers.cookie) {

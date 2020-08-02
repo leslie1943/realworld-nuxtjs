@@ -2,7 +2,8 @@
  * user apis
  */
 
-import request from '@/utils/request'
+// import request from '@/utils/request'
+import { request } from '@/plugins/request'
 
 // 用户登录
 export const login = data => {
