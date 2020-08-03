@@ -23,7 +23,6 @@
 
       <div class="row">
         <div class="col-xs-12 col-md-8 offset-md-2">
-          <!-- TODO: -->
           <article-comments :article="article" />
         </div>
       </div>
@@ -38,11 +37,16 @@ import ArticleMeta from './components/article-meta'
 import ArticleComments from './components/article-comments'
 export default {
   name: 'ArticleIndex',
+  // 在路由匹配组件渲染之前会先执行中间件处理
+  middleware: ['authenticated'],
   components: { ArticleMeta, ArticleComments },
   async asyncData({ query, params }) {
     const slug = params.slug
     const { data } = await getArticle(slug)
     const { article } = data
+    // 添加辅助属性
+    article.favoriteDisable = false
+    article.followingDisable = false
     // slug:markdown-ddof1g 可以测试 markdown 是否生效
     const md = new MarkdownIt()
     article.body = md.render(article.body)

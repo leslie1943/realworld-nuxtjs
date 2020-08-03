@@ -4,7 +4,9 @@
     "description": "- github `https://github.com/gothinkster/realworld`\r - online demo: `https://demo.realworld.io/#/`\r - 页面模板 `https://github.com/gothinkster/realworld-starter-kit/blob/master/FRONTEND_INSTRUCTIONS.md`\r - 接口文档 `https://github.com/gothinker/realworld/tree/master/api`",
     "main": "index.js",
     "scripts": {
-        "dev": "nuxt"
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start"
     },
     "keywords": [],
     "author": "",

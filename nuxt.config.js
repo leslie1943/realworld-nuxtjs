@@ -54,7 +54,12 @@ module.exports = {
       ])
     }
   },
-
+  // 运行服务相关
+  server: {
+    // host: '0.0.0.0',
+    host: 'localhost',
+    port: 3000
+  },
   // 注册插件
   plugins: [
     // 波浪线出发,从根路径触发

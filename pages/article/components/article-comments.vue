@@ -2,13 +2,13 @@
   <div>
     <form class="card comment-form">
       <div class="card-block">
-        <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+        <textarea class="form-control" placeholder="Write a comment..." rows="3" v-model="comment"></textarea>
       </div>
       <div class="card-footer">
         <!-- <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" /> -->
         <!-- localhost:3000/article/my-first-post-zpuxos -->
-        <img :src="user.image" class="comment-author-img" />
-        <button class="btn btn-sm btn-primary">Post Comment</button>
+        <img v-if="user.image" :src="user.image" class="comment-author-img" />
+        <button class="btn btn-sm btn-primary" @click="addComment">Post Comment</button>
       </div>
     </form>
 
@@ -29,7 +29,11 @@
         >{{comment.author.username}}</nuxt-link>
         <span class="date-posted">{{comment.createdAt|date('MMM DD YYYY')}}</span>
 
-        <span class="mod-options" v-if="comment.author.username === user.username">
+        <span
+          class="mod-options"
+          v-if="comment.author.username === user.username"
+          @click="deleteComment(comment.id)"
+        >
           <i class="ion-trash-a"></i>
         </span>
       </div>
@@ -38,7 +42,7 @@
 </template>
 
 <script>
-import { getComments } from '@/api/article'
+import { getComments, addComment, deleteComment } from '@/api/article'
 import { mapState } from 'vuex'
 export default {
   nam: 'ArtcileComments',
@@ -50,7 +54,8 @@ export default {
   },
   data() {
     return {
-      comments: []
+      comments: [],
+      comment: ''
     }
   },
   async mounted() {
@@ -59,6 +64,23 @@ export default {
   },
   computed: {
     ...mapState(['user'])
+  },
+  methods: {
+    // 添加comment
+    async addComment() {
+      const params = {
+        comment: {
+          body: this.comment
+        }
+      }
+      await addComment(this.article.slug, params)
+    },
+    // 删除comment
+    async deleteComment(id) {
+      await deleteComment(this.article.slug, id)
+      // 页面数据删除记录
+      this.comments = this.comments.filter(item => item.id != id)
+    }
   }
 }
 </script>
