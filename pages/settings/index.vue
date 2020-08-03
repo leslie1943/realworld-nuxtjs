@@ -95,6 +95,7 @@ export default {
 
     // 退出登录
     async logout() {
+      // 清除cookie 和 vuex 用户数据
       this.$store.commit('setUser', null)
       Cookie.remove('user')
       this.$router.push(`/login`)
