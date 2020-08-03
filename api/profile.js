@@ -20,3 +20,11 @@ export const unfollowingUser = username => {
     url: `/api/profiles/${username}/follow`,
   })
 }
+
+// get user profile
+export const getProfile = username => {
+  return request({
+    method: 'GET',
+    url: `/api/profiles/${username}`
+  })
+}

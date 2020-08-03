@@ -6,44 +6,62 @@
     <div class="info">
       <nuxt-link
         class="author"
-        :to="{to:'profile',params:{username:article.author.username}}"
+        :to="{name:'profile',params:{username:article.author.username}}"
       >{{article.author.username}}</nuxt-link>
       <span class="date">{{article.createAt|date('MMM DD YYYY')}}</span>
     </div>
-    <!-- DONE: 关注作者 -->
-    <button
-      class="btn btn-sm btn-outline-primary"
-      :class="{active: article.author.following}"
-      @click="onFollowing(article)"
-      :disabled="article.followingDisable"
-    >
-      <i class="ion-plus-round"></i>
-      &nbsp;
-      {{article.author.following ? `unfollowing ${article.author.username}`:`following ${article.author.username}`}}
-      <!-- <span
+
+    <!-- 如果不是自己的文章 -->
+    <template v-if="article.author.username != user.username">
+      <!-- DONE: 关注作者 -->
+      <button
+        class="btn btn-sm btn-outline-primary"
+        :class="{active: article.author.following}"
+        @click="onFollowing(article)"
+        :disabled="article.followingDisable"
+      >
+        <i class="ion-plus-round"></i>
+        &nbsp;
+        {{article.author.following ? `unfollowing ${article.author.username}`:`following ${article.author.username}`}}
+        <!-- <span
         class="counter"
-      ></span>-->
-    </button>
-    &nbsp;&nbsp;
-    <button
-      class="btn btn-sm btn-outline-primary"
-      :class="{active: article.favorited}"
-      @click="onFavorite(article)"
-      :disabled="article.favoriteDisable"
-    >
-      <i class="ion-heart"></i>
-      &nbsp;
-      {{article.favorited ? 'unfavorite Post':'Favorite Post'}}
-      <span
-        class="counter"
-      >({{article.favoritesCount}})</span>
-    </button>
+        ></span>-->
+      </button>
+      &nbsp;&nbsp;
+      <button
+        class="btn btn-sm btn-outline-primary"
+        :class="{active: article.favorited}"
+        @click="onFavorite(article)"
+        :disabled="article.favoriteDisable"
+      >
+        <i class="ion-heart"></i>
+        &nbsp;
+        {{article.favorited ? 'unfavorite Post':'Favorite Post'}}
+        <span
+          class="counter"
+        >({{article.favoritesCount}})</span>
+      </button>
+    </template>
+    <!-- 如果是自己的文章 -->
+    <template v-else>
+      <nuxt-link
+        class="btn btn-outline-secondary btn-sm"
+        :to="{name: 'editor-edit', params:{slug: article.slug}}"
+      >
+        <i class="ion-edit"></i> Edit Article
+      </nuxt-link>
+
+      <button class="btn btn-outline-danger btn-sm" @click="deleteArticle(article.slug)">
+        <i class="ion-trash-a"></i> Delete Article
+      </button>
+    </template>
   </div>
 </template>
 
 <script>
-import { addFavorite, deleteFavorite } from '@/api/article'
+import { addFavorite, deleteFavorite, deleteArticle } from '@/api/article'
 import { followingUser, unfollowingUser } from '@/api/profile'
+import { mapState } from 'vuex'
 
 export default {
   name: 'ArticleMeta',
@@ -86,7 +104,14 @@ export default {
         // author.followingsCount += 1
       }
       article.followingDisable = false
+    },
+    async deleteArticle(slug) {
+      await deleteArticle(slug)
+      this.$router.push('/')
     }
+  },
+  computed: {
+    ...mapState(['user'])
   }
 }
 </script>
