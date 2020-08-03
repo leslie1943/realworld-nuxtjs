@@ -218,6 +218,11 @@ export default {
       }
       article.favoriteDisable = false
     }
+  },
+  head() {
+    return {
+      title: `@Home - RealWorld`,
+    }
   }
 }
 </script>
