@@ -14,7 +14,6 @@
               :class="{active: profile.following}"
             >
               <i class="ion-plus-round"></i>
-              &nbsp;
               {{profile.following ? 'Unfollow':'Follow'}} {{profile.username}}
             </button>
           </div>

@@ -21,13 +21,11 @@
         :disabled="article.followingDisable"
       >
         <i class="ion-plus-round"></i>
-        &nbsp;
         {{article.author.following ? `unfollowing ${article.author.username}`:`following ${article.author.username}`}}
         <!-- <span
         class="counter"
         ></span>-->
       </button>
-      &nbsp;&nbsp;
       <button
         class="btn btn-sm btn-outline-primary"
         :class="{active: article.favorited}"
@@ -35,7 +33,6 @@
         :disabled="article.favoriteDisable"
       >
         <i class="ion-heart"></i>
-        &nbsp;
         {{article.favorited ? 'unfavorite Post':'Favorite Post'}}
         <span
           class="counter"

@@ -18,7 +18,7 @@
               <i class="ion-compose"></i>&nbsp;New Post
               </a>-->
               <nuxt-link class="nav-link" to="/editor">
-                <i class="ion-compose"></i>&nbsp;New Post
+                <i class="ion-compose"></i>New Post
               </nuxt-link>
             </li>
             <li class="nav-item">
@@ -26,7 +26,7 @@
               <i class="ion-gear-a"></i>&nbsp;Settings
               </a>-->
               <nuxt-link class="nav-link" to="/settings">
-                <i class="ion-gear-a"></i>&nbsp;Settings
+                <i class="ion-gear-a"></i>Settings
               </nuxt-link>
             </li>
             <li class="nav-item">

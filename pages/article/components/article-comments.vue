@@ -22,7 +22,7 @@
           class="comment-author"
         >
           <img :src="comment.author.image" class="comment-author-img" />
-        </nuxt-link>&nbsp;
+        </nuxt-link>
         <nuxt-link
           :to="{name:'profile',params:{username:comment.author.username}}"
           class="comment-author"
