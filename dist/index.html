@@ -4,33 +4,7 @@
 <head>
     <!-- <title>LOCALHOST:3000</title> -->
     <link rel="shortcut icon" href="/logo.png">
-    <title>@Home - RealWorld</title>
-    <link rel="preload" href="/_nuxt/runtime.4aefd98.js" as="script">
-    <link rel="preload" href="/_nuxt/commons/app.def29d8.js" as="script">
-    <link rel="preload" href="/_nuxt/app.3ea7f6b.js" as="script">
-    <link rel="preload" href="/_nuxt/commons/default.265a819.js" as="script">
-    <style data-vue-ssr-id="3191d5ad:0">
-        .nuxt-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            width: 0;
-            opacity: 1;
-            transition: width .1s, opacity .4s;
-            background-color: #000;
-            z-index: 999999
-        }
-
-        .nuxt-progress.nuxt-progress-notransition {
-            transition: none
-        }
-
-        .nuxt-progress-failed {
-            background-color: red
-        }
-    </style>
+    <title>@Home - RealWorld</title><link rel="preload" href="/_nuxt/runtime.8749cf4.js" as="script"><link rel="preload" href="/_nuxt/commons/app.def29d8.js" as="script"><link rel="preload" href="/_nuxt/app.eeb2186.js" as="script"><link rel="preload" href="/_nuxt/commons/default.d640abd.js" as="script"><style data-vue-ssr-id="3191d5ad:0">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
     <!-- Import Ionicon icons & Google Fonts our Bootstrap theme relies on -->
     <!-- <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> -->
     <!-- 使用CDN代理的路径 -->
@@ -42,297 +16,56 @@
     <!-- Import the custom Bootstrap 4 theme from our hosted CDN -->
     <!-- <link rel="stylesheet" href="//demo.productionready.io/main.css"> -->
     <!-- 本地化文件 http://localhost:3000/index.css 测试 -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
 
 </head>
 
 <body>
     <!-- 渲染的内容会注入到 APP 中 -->
-    <div data-server-rendered="true" id="__nuxt">
-        <!---->
-        <div id="__layout">
-            <div>
-                <nav class="navbar navbar-light">
-                    <div class="container"><a href="/" aria-current="page" class="navbar-brand nuxt-link-exact-active active">Home</a>
-                        <ul class="nav navbar-nav pull-xs-right">
-                            <li class="nav-item"><a href="/" aria-current="page" class="nav-link nuxt-link-exact-active active">Home</a></li>
-                            <li class="nav-item"><a href="/register" class="nav-link">Sign up</a></li>
-                            <li class="nav-item"><a href="/login" class="nav-link">Sign in</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="home-page">
-                    <div class="banner">
-                        <div class="container">
-                            <h1 class="logo-font">conduit</h1>
-                            <p>A place to share your knowledge.</p>
-                        </div>
-                    </div>
-                    <div class="container page">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="feed-toggle">
-                                    <ul class="nav nav-pills outline-active">
-                                        <!---->
-                                        <li class="nav-item"><a href="/?tab=global_feed" class="nav-link active">Global Feed</a></li>
-                                        <!---->
-                                    </ul>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/wolftester67414061"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/wolftester67414061" class="author">wolftester67414061</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/autotesttitle-2an3x0" class="preview-link">
-                                        <h1>AutoTestTitle</h1>
-                                        <p>AutoTestDescription</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/wolftester7394553"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/wolftester7394553" class="author">wolftester7394553</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/autotesttitle-ero7ph" class="preview-link">
-                                        <h1>AutoTestTitle</h1>
-                                        <p>AutoTestDescription</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-ifrh3n" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-mtibpl" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-miej8t" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/wolftester9587944"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/wolftester9587944" class="author">wolftester9587944</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/autotesttitle-s2ongd" class="preview-link">
-                                        <h1>AutoTestTitle</h1>
-                                        <p>AutoTestDescription</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-jz8sqi" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-17xiqm" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-wgosf" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-umgdrp" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-yoq0q4" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-je5fz7" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-x0etxg" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-tzbv5p" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-ob6o2q" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-xht7ta" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-shyrve" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/foo45665546465456"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/foo45665546465456" class="author">foo45665546465456</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/foo-zrudu3" class="preview-link">
-                                        <h1>foo</h1>
-                                        <p>foo</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-um9wuz" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                                <div class="article-preview">
-                                    <div class="article-meta"><a href="/profile/sacha"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a>
-                                        <div class="info"><a href="/profile/sacha" class="author">sacha</a> <span class="date">Aug 03 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
-                                            0
-                                        </button>
-                                    </div> <a href="/article/this-is-a-title-9tfxtj" class="preview-link">
-                                        <h1>This is a title</h1>
-                                        <p>This is a description</p> <span>Read more...</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="sidebar">
-                                    <p>Popular Tags</p>
-                                    <div class="tag-list"><a href="/?tab=tag&tag=%E2%80%8C" class="tag-pill tag-default">‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=Hu%E2%80%8CMan%E2%80%8CIty" class="tag-pill tag-default">Hu‌Man‌Ity</a><a href="/?tab=tag&tag=HuManIty" class="tag-pill tag-default">HuManIty</a><a href="/?tab=tag&tag=Gandhi" class="tag-pill tag-default">Gandhi</a><a href="/?tab=tag&tag=BlackLivesMatter" class="tag-pill tag-default">BlackLivesMatter</a><a href="/?tab=tag&tag=Black%E2%80%8CLives%E2%80%8CMatter" class="tag-pill tag-default">Black‌Lives‌Matter</a><a href="/?tab=tag&tag=HITLER" class="tag-pill tag-default">HITLER</a><a href="/?tab=tag&tag=SIDA" class="tag-pill tag-default">SIDA</a><a href="/?tab=tag&tag=test" class="tag-pill tag-default">test</a><a href="/?tab=tag&tag=butt" class="tag-pill tag-default">butt</a><a href="/?tab=tag&tag=dragons" class="tag-pill tag-default">dragons</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a href="/?page=1" class="page-link">1</a></li>
-                                <li class="page-item"><a href="/?page=2" class="page-link">2</a></li>
-                                <li class="page-item"><a href="/?page=3" class="page-link">3</a></li>
-                                <li class="page-item"><a href="/?page=4" class="page-link">4</a></li>
-                                <li class="page-item"><a href="/?page=5" class="page-link">5</a></li>
-                                <li class="page-item"><a href="/?page=6" class="page-link">6</a></li>
-                                <li class="page-item"><a href="/?page=7" class="page-link">7</a></li>
-                                <li class="page-item"><a href="/?page=8" class="page-link">8</a></li>
-                                <li class="page-item"><a href="/?page=9" class="page-link">9</a></li>
-                                <li class="page-item"><a href="/?page=10" class="page-link">10</a></li>
-                                <li class="page-item"><a href="/?page=11" class="page-link">11</a></li>
-                                <li class="page-item"><a href="/?page=12" class="page-link">12</a></li>
-                                <li class="page-item"><a href="/?page=13" class="page-link">13</a></li>
-                                <li class="page-item"><a href="/?page=14" class="page-link">14</a></li>
-                                <li class="page-item"><a href="/?page=15" class="page-link">15</a></li>
-                                <li class="page-item"><a href="/?page=16" class="page-link">16</a></li>
-                                <li class="page-item"><a href="/?page=17" class="page-link">17</a></li>
-                                <li class="page-item"><a href="/?page=18" class="page-link">18</a></li>
-                                <li class="page-item"><a href="/?page=19" class="page-link">19</a></li>
-                                <li class="page-item"><a href="/?page=20" class="page-link">20</a></li>
-                                <li class="page-item"><a href="/?page=21" class="page-link">21</a></li>
-                                <li class="page-item"><a href="/?page=22" class="page-link">22</a></li>
-                                <li class="page-item"><a href="/?page=23" class="page-link">23</a></li>
-                                <li class="page-item"><a href="/?page=24" class="page-link">24</a></li>
-                                <li class="page-item"><a href="/?page=25" class="page-link">25</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <footer>
-                    <div class="container"><a href="/" class="logo-font">conduit</a> <span class="attribution">
-                            An interactive learning project from
-                            <a href="https://thinkster.io">Thinkster</a>. Code & design licensed under MIT.
-                        </span></div>
-                </footer>
-            </div>
-        </div>
-    </div>
-    <script>
-        window.__NUXT__ = function(t, e, i, a, o, s, r, l, d, u, n, f, g, b, v, c, h, p, m, A, y, T, w, L, D, C, Z, x, j, q, z) { return { layout: "default", data: [{}, { articles: [{ title: l, slug: "autotesttitle-2an3x0", body: u, createdAt: g, updatedAt: g, tagList: [], description: d, author: { username: "wolftester67414061", bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: l, slug: "autotesttitle-ero7ph", body: u, createdAt: f, updatedAt: f, tagList: [], description: d, author: { username: "wolftester7394553", bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-ifrh3n", body: o, createdAt: n, updatedAt: n, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-mtibpl", body: o, createdAt: b, updatedAt: b, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-miej8t", body: o, createdAt: v, updatedAt: v, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: l, slug: "autotesttitle-s2ongd", body: u, createdAt: z, updatedAt: z, tagList: [], description: d, author: { username: "wolftester9587944", bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-jz8sqi", body: o, createdAt: h, updatedAt: h, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-17xiqm", body: o, createdAt: p, updatedAt: p, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-wgosf", body: o, createdAt: m, updatedAt: m, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-umgdrp", body: o, createdAt: A, updatedAt: A, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-yoq0q4", body: o, createdAt: y, updatedAt: y, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-je5fz7", body: o, createdAt: T, updatedAt: T, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-x0etxg", body: o, createdAt: w, updatedAt: w, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-tzbv5p", body: o, createdAt: L, updatedAt: L, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-ob6o2q", body: o, createdAt: D, updatedAt: D, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-xht7ta", body: o, createdAt: C, updatedAt: C, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-shyrve", body: o, createdAt: Z, updatedAt: Z, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: "foo", slug: "foo-zrudu3", body: "#foo \n\nfoo barrr", createdAt: x, updatedAt: x, tagList: [j], description: "foo", author: { username: "foo45665546465456", bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-um9wuz", body: o, createdAt: q, updatedAt: q, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }, { title: a, slug: "this-is-a-title-9tfxtj", body: o, createdAt: c, updatedAt: c, tagList: [], description: s, author: { username: r, bio: e, image: i, following: t }, favorited: t, favoritesCount: 0, favoriteDisable: t }], articlesCount: 500, limit: 20, page: 1, tags: ["‌", "‌‌", "‌‌‌", "‌‌‌‌‌", "‌‌‌‌", "‌‌‌‌‌‌‌‌", "‌‌‌‌‌‌‌‌‌‌‌", "‌‌‌‌‌‌", "‌‌‌‌‌‌‌‌‌‌", "‌‌‌‌‌‌‌", "Hu‌Man‌Ity", "HuManIty", "Gandhi", "BlackLivesMatter", "Black‌Lives‌Matter", "HITLER", "SIDA", j, "butt", "dragons"], tab: "global_feed", tag: "" }], fetch: [], error: e, state: { user: e }, serverRendered: !0, routePath: "/", config: {} } }(!1, null, "https://static.productionready.io/images/smiley-cyrus.jpg", "This is a title", "This is the body of the Article", "This is a description", "sacha", "AutoTestTitle", "AutoTestDescription", "AutoTestBody", "2020-08-03T14:10:13.454Z", "2020-08-03T14:10:54.404Z", "2020-08-03T14:12:40.870Z", "2020-08-03T14:08:13.800Z", "2020-08-03T14:07:20.965Z", "2020-08-03T13:56:16.219Z", "2020-08-03T14:05:04.822Z", "2020-08-03T14:04:41.987Z", "2020-08-03T14:04:29.599Z", "2020-08-03T14:04:05.868Z", "2020-08-03T14:04:00.985Z", "2020-08-03T14:03:45.924Z", "2020-08-03T14:03:40.300Z", "2020-08-03T14:03:10.266Z", "2020-08-03T14:01:31.170Z", "2020-08-03T14:01:25.458Z", "2020-08-03T14:01:19.666Z", "2020-08-03T13:59:03.504Z", "test", "2020-08-03T13:56:38.632Z", "2020-08-03T14:05:42.038Z")
-    </script>
-    <script src="/_nuxt/runtime.4aefd98.js" defer></script>
-    <script src="/_nuxt/commons/default.265a819.js" defer></script>
-    <script src="/_nuxt/commons/app.def29d8.js" defer></script>
-    <script src="/_nuxt/app.3ea7f6b.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><nav class="navbar navbar-light"><div class="container"><a href="/" aria-current="page" class="navbar-brand nuxt-link-exact-active active">Home</a> <ul class="nav navbar-nav pull-xs-right"><li class="nav-item"><a href="/" aria-current="page" class="nav-link nuxt-link-exact-active active">Home</a></li> <li class="nav-item"><a href="/register" class="nav-link">Sign up</a></li> <li class="nav-item"><a href="/login" class="nav-link">Sign in</a></li></ul></div></nav> <div class="home-page"><div class="banner"><div class="container"><h1 class="logo-font">conduit</h1> <p>A place to share your knowledge.</p></div></div> <div class="container page"><div class="row"><div class="col-md-9"><div class="feed-toggle"><ul class="nav nav-pills outline-active"><!----> <li class="nav-item"><a href="/?tab=global_feed" class="nav-link active">Global Feed</a></li> <!----></ul></div> <div class="article-preview"><div class="article-meta"><a href="/profile/aujilo"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/aujilo" class="author">aujilo</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/hello-bangladesh-mrwfsu" class="preview-link"><h1>Hello Bangladesh</h1> <p>About nothing</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/igormasc"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/igormasc" class="author">igormasc</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/article-title-elw1dq" class="preview-link"><h1>Article Title</h1> <p>Article Description</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/andrus"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/andrus" class="author">andrus</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              1
+            </button></div> <a href="/article/text-lmwkxm" class="preview-link"><h1>text</h1> <p>text 1</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/igormasc"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/igormasc" class="author">igormasc</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/article-title-gl12x1" class="preview-link"><h1>Article Title</h1> <p>Article Description</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/igormasc"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/igormasc" class="author">igormasc</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/article-title-2onqsp" class="preview-link"><h1>Article Title</h1> <p>Article Description</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Karate1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Karate1" class="author">Karate1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/galladon-of-tarth-gtp5pz" class="preview-link"><h1>Galladon of Tarth</h1> <p>Vaes Dothrak</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Karate1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Karate1" class="author">Karate1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/rickard-karstark-pppqpx" class="preview-link"><h1>Rickard Karstark</h1> <p>Lorath</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Karate1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Karate1" class="author">Karate1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/omer-blackberry-9p9txh" class="preview-link"><h1>Omer Blackberry</h1> <p>Braavos</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Karate1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Karate1" class="author">Karate1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/valaena-velaryon-atolbq" class="preview-link"><h1>Valaena Velaryon</h1> <p>Gulltown</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Karate1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Karate1" class="author">Karate1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/theo-frey-rgub3" class="preview-link"><h1>Theo Frey</h1> <p>Asshai</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/hoster-tully-wr505o" class="preview-link"><h1>Hoster Tully</h1> <p>Yunkai</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/belis-2ac7oy" class="preview-link"><h1>Belis</h1> <p>Bayasabhad</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/luthor-tyrell-iuli8d" class="preview-link"><h1>Luthor Tyrell</h1> <p>Lorath</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/aemon-estermont-ixdai7" class="preview-link"><h1>Aemon Estermont</h1> <p>Tyria</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/lister-29xbb5" class="preview-link"><h1>Lister</h1> <p>Tyria</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/maynard-plumm-sl572b" class="preview-link"><h1>Maynard Plumm</h1> <p>Qarth</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/ellyn-tarbeck-h3nlf1" class="preview-link"><h1>Ellyn Tarbeck</h1> <p>Sunspear</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/damon-d3jlkl" class="preview-link"><h1>Damon</h1> <p>Chroyane</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/doreah-m8nade" class="preview-link"><h1>Doreah</h1> <p>Chroyane</p> <span>Read more...</span></a></div><div class="article-preview"><div class="article-meta"><a href="/profile/Kar1"><img src="https://static.productionready.io/images/smiley-cyrus.jpg"></a> <div class="info"><a href="/profile/Kar1" class="author">Kar1</a> <span class="date">Aug 04 2020</span></div> <button class="btn btn-outline-primary btn-sm pull-xs-right"><i class="ion-heart"></i>
+              0
+            </button></div> <a href="/article/triston-farwynd-6rta19" class="preview-link"><h1>Triston Farwynd</h1> <p>Vaes Dothrak</p> <span>Read more...</span></a></div></div> <div class="col-md-3"><div class="sidebar"><p>Popular Tags</p> <div class="tag-list"><a href="/?tab=tag&tag=%E2%80%8C" class="tag-pill tag-default">‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌</a><a href="/?tab=tag&tag=%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C" class="tag-pill tag-default">‌‌‌‌‌‌‌‌‌‌</a><a href="/?tab=tag&tag=HuManIty" class="tag-pill tag-default">HuManIty</a><a href="/?tab=tag&tag=Hu%E2%80%8CMan%E2%80%8CIty" class="tag-pill tag-default">Hu‌Man‌Ity</a><a href="/?tab=tag&tag=Gandhi" class="tag-pill tag-default">Gandhi</a><a href="/?tab=tag&tag=BlackLivesMatter" class="tag-pill tag-default">BlackLivesMatter</a><a href="/?tab=tag&tag=Black%E2%80%8CLives%E2%80%8CMatter" class="tag-pill tag-default">Black‌Lives‌Matter</a><a href="/?tab=tag&tag=HITLER" class="tag-pill tag-default">HITLER</a><a href="/?tab=tag&tag=SIDA" class="tag-pill tag-default">SIDA</a><a href="/?tab=tag&tag=test" class="tag-pill tag-default">test</a><a href="/?tab=tag&tag=butt" class="tag-pill tag-default">butt</a><a href="/?tab=tag&tag=dragons" class="tag-pill tag-default">dragons</a></div></div></div></div> <nav><ul class="pagination"><li class="page-item active"><a href="/?page=1" class="page-link">1</a></li><li class="page-item"><a href="/?page=2" class="page-link">2</a></li><li class="page-item"><a href="/?page=3" class="page-link">3</a></li><li class="page-item"><a href="/?page=4" class="page-link">4</a></li><li class="page-item"><a href="/?page=5" class="page-link">5</a></li><li class="page-item"><a href="/?page=6" class="page-link">6</a></li><li class="page-item"><a href="/?page=7" class="page-link">7</a></li><li class="page-item"><a href="/?page=8" class="page-link">8</a></li><li class="page-item"><a href="/?page=9" class="page-link">9</a></li><li class="page-item"><a href="/?page=10" class="page-link">10</a></li><li class="page-item"><a href="/?page=11" class="page-link">11</a></li><li class="page-item"><a href="/?page=12" class="page-link">12</a></li><li class="page-item"><a href="/?page=13" class="page-link">13</a></li><li class="page-item"><a href="/?page=14" class="page-link">14</a></li><li class="page-item"><a href="/?page=15" class="page-link">15</a></li><li class="page-item"><a href="/?page=16" class="page-link">16</a></li><li class="page-item"><a href="/?page=17" class="page-link">17</a></li><li class="page-item"><a href="/?page=18" class="page-link">18</a></li><li class="page-item"><a href="/?page=19" class="page-link">19</a></li><li class="page-item"><a href="/?page=20" class="page-link">20</a></li><li class="page-item"><a href="/?page=21" class="page-link">21</a></li><li class="page-item"><a href="/?page=22" class="page-link">22</a></li><li class="page-item"><a href="/?page=23" class="page-link">23</a></li><li class="page-item"><a href="/?page=24" class="page-link">24</a></li><li class="page-item"><a href="/?page=25" class="page-link">25</a></li></ul></nav></div></div> <footer><div class="container"><a href="/" class="logo-font">conduit</a> <span class="attribution">
+        An interactive learning project from
+        <a href="https://thinkster.io">Thinkster</a>. Code & design licensed under MIT.
+      </span></div></footer></div></div></div><script>window.__NUXT__=function(e,t,a,i,o,r,s,l,d,n,u,g,f,b,m,c,h,v,p,y,A,w,T,L,D,C,Z,k,x,B,I,H,M,_,q){return{layout:"default",data:[{},{articles:[{title:"Hello Bangladesh",slug:"hello-bangladesh-mrwfsu",body:"I am ragib.",createdAt:c,updatedAt:c,tagList:[],description:"About nothing",author:{username:"aujilo",bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:l,slug:"article-title-elw1dq",body:d,createdAt:v,updatedAt:v,tagList:[],description:n,author:{username:s,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"text",slug:"text-lmwkxm",body:"text 2",createdAt:p,updatedAt:p,tagList:[],description:"text 1",author:{username:"andrus",bio:t,image:a,following:e},favorited:e,favoritesCount:1,favoriteDisable:e},{title:l,slug:"article-title-gl12x1",body:d,createdAt:g,updatedAt:g,tagList:[],description:n,author:{username:s,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:l,slug:"article-title-2onqsp",body:d,createdAt:f,updatedAt:f,tagList:[],description:n,author:{username:s,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Galladon of Tarth",slug:"galladon-of-tarth-gtp5pz",body:"Once you’ve accepted your flaws, no one can use them against you.",createdAt:b,updatedAt:b,tagList:[],description:m,author:{username:o,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Rickard Karstark",slug:"rickard-karstark-pppqpx",body:"... a mind needs books as a sword needs a whetstone, if it is to keep its edge.",createdAt:h,updatedAt:h,tagList:[],description:u,author:{username:o,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Omer Blackberry",slug:"omer-blackberry-9p9txh",body:r,createdAt:y,updatedAt:y,tagList:[],description:"Braavos",author:{username:o,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Valaena Velaryon",slug:"valaena-velaryon-atolbq",body:"Power is a curious thing. Who lives, Who dies. Power resides where men believe it resides. It is a trick, A shadow on the wall.",createdAt:A,updatedAt:A,tagList:[],description:"Gulltown",author:{username:o,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Theo Frey",slug:"theo-frey-rgub3",body:w,createdAt:T,updatedAt:T,tagList:[],description:"Asshai",author:{username:o,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Hoster Tully",slug:"hoster-tully-wr505o",body:r,createdAt:L,updatedAt:L,tagList:[],description:"Yunkai",author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Belis",slug:"belis-2ac7oy",body:"Summer will end soon enough, and childhood as well.",createdAt:D,updatedAt:D,tagList:[],description:"Bayasabhad",author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Luthor Tyrell",slug:"luthor-tyrell-iuli8d",body:"Give me honorable enemies rather than ambitious ones, and I'll sleep more easily by night.",createdAt:C,updatedAt:C,tagList:[],description:u,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Aemon Estermont",slug:"aemon-estermont-ixdai7",body:r,createdAt:Z,updatedAt:Z,tagList:[],description:k,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Lister",slug:"lister-29xbb5",body:"Some old wounds never truly heal, and bleed again at the slightest word.",createdAt:x,updatedAt:x,tagList:[],description:k,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Maynard Plumm",slug:"maynard-plumm-sl572b",body:r,createdAt:B,updatedAt:B,tagList:[],description:"Qarth",author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Ellyn Tarbeck",slug:"ellyn-tarbeck-h3nlf1",body:"There are no heroes...in life, the monsters win.",createdAt:I,updatedAt:I,tagList:[],description:"Sunspear",author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Damon",slug:"damon-d3jlkl",body:"Laughter is poison to fear.",createdAt:H,updatedAt:H,tagList:[],description:M,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Doreah",slug:"doreah-m8nade",body:w,createdAt:_,updatedAt:_,tagList:[],description:M,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e},{title:"Triston Farwynd",slug:"triston-farwynd-6rta19",body:"Never forget who you are. The rest of the world won't. Wear it like an armor and it can never be used against you.",createdAt:q,updatedAt:q,tagList:[],description:m,author:{username:i,bio:t,image:a,following:e},favorited:e,favoritesCount:0,favoriteDisable:e}],articlesCount:500,limit:20,page:1,tags:["‌","‌‌","‌‌‌","‌‌‌‌","‌‌‌‌‌","‌‌‌‌‌‌‌‌‌‌‌","‌‌‌‌‌‌‌","‌‌‌‌‌‌‌‌","‌‌‌‌‌‌","‌‌‌‌‌‌‌‌‌‌","HuManIty","Hu‌Man‌Ity","Gandhi","BlackLivesMatter","Black‌Lives‌Matter","HITLER","SIDA","test","butt","dragons"],tab:"global_feed",tag:""}],fetch:[],error:t,state:{user:t},serverRendered:!0,routePath:"/",config:{}}}(!1,null,"https://static.productionready.io/images/smiley-cyrus.jpg","Kar1","Karate1","Fear cuts deeper than swords.","igormasc","Article Title","Article Content","Article Description","Lorath","2020-08-04T01:37:29.815Z","2020-08-04T01:36:51.979Z","2020-08-04T01:07:14.543Z","Vaes Dothrak","2020-08-04T01:39:56.877Z","2020-08-04T01:04:53.717Z","2020-08-04T01:39:41.871Z","2020-08-04T01:38:40.642Z","2020-08-04T01:04:53.608Z","2020-08-04T01:03:02.973Z","The North remembers.","2020-08-04T01:02:35.716Z","2020-08-04T00:57:55.664Z","2020-08-04T00:56:02.196Z","2020-08-04T00:56:02.192Z","2020-08-04T00:55:18.978Z","Tyria","2020-08-04T00:52:26.577Z","2020-08-04T00:50:40.471Z","2020-08-04T00:50:40.380Z","2020-08-04T00:50:01.410Z","Chroyane","2020-08-04T00:36:10.116Z","2020-08-04T00:36:09.974Z")</script><script src="/_nuxt/runtime.8749cf4.js" defer></script><script src="/_nuxt/commons/default.d640abd.js" defer></script><script src="/_nuxt/commons/app.def29d8.js" defer></script><script src="/_nuxt/app.eeb2186.js" defer></script>
 </body>
 
 </html>
