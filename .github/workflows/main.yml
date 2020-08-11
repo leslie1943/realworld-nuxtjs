@@ -55,7 +55,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /root/realworld-nuxtjs
-          wget https://github.com/leslie1943/Lagou-learning-8-4-nuxtjs-case/releases/latest/download/release.tgz -O release.tgz
+          wget https://github.com/leslie1943/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
           npm install --production
           pm2 reload pm2.config.json
