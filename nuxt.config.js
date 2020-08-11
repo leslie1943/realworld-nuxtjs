@@ -61,8 +61,8 @@ module.exports = {
   },
   // 运行服务相关
   server: {
-    // host: '0.0.0.0',
-    host: 'localhost',
+    host: '0.0.0.0',
+    // host: 'localhost', // 只能用于本机访问
     port: 3000
   },
   // 注册插件
