@@ -11,7 +11,9 @@ export const request = axios.create({
   // baseURL: 'https://realworld.api.fed.lagounews.com'
 })
 
-// 通过插件机制获取上下文对象(query,params,req,res,app,store)
+// 💛💛💛💛💛
+// 💛通过插件机制获取上下文对象(query,params,req,res,app,store)💛
+// 💛💛💛💛💛
 // 插件导出函数必须作为 default 成员
 export default ({ store }) => {
 
